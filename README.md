@@ -20,7 +20,7 @@ A classic two-player Pong game built with the SolarSail engine.
 
 ```bash
 # From the pong directory
-make play
+make
 ```
 
 ## Game Features
