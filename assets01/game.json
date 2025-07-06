@@ -1,0 +1,79 @@
+{
+	"name": "pong_game_scene",
+	"templates": [
+		{
+			"name": "paddle",
+			"script": {
+				"path": "paddle.lua"
+			},
+			"transform": {
+				"scale": {
+					"x": 0.05,
+					"y": 0.3,
+					"z": 1
+				}
+			},
+			"spriterenderer": {
+				"layer": 10
+			},
+			"staticsprite": {
+				"atlas": "atlas",
+				"name": "white_square"
+			}
+		},
+		{
+			"name": "ball",
+			"script": {
+				"path": "ball.lua"
+			},
+			"transform": {
+				"scale": {
+					"x": 0.06,
+					"y": 0.06,
+					"z": 1
+				}
+			},
+			"spriterenderer": {
+				"layer": 11
+			},
+			"staticsprite": {
+				"atlas": "atlas",
+				"name": "white_square"
+			}
+		}
+	],
+	"entities": [
+		{
+			"name": "game_controller",
+			"script": {
+				"path": "game_controller.lua"
+			}
+		},
+		{
+			"name": "left_paddle",
+			"template": "paddle",
+			"transform": {
+				"translation": {
+					"x": -1.2,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},
+		{
+			"name": "right_paddle",
+			"template": "paddle",
+			"transform": {
+				"translation": {
+					"x": 1.2,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},
+		{
+			"name": "ball",
+			"template": "ball"
+		}
+	]
+}
