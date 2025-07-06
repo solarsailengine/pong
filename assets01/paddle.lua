@@ -1,6 +1,5 @@
 local script = require('scriptcomponent'):derive()
 local config = require('config')
-local math_utils = require('math_utils')
 
 function script:on_init()
     -- Register self in game state based on transform position
@@ -61,7 +60,7 @@ function script:on_update()
         self.y = self.y + movement
         
         -- Keep paddle within play area bounds using clamp utility
-        self.y = math_utils.clamp(self.y, 
+        self.y = engine.math.clamp(self.y, 
                                  config.PLAY_AREA.bottom + self.half_height,
                                  config.PLAY_AREA.top - self.half_height)
         

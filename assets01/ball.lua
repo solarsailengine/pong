@@ -1,6 +1,5 @@
 local script = require('scriptcomponent'):derive()
 local config = require('config')
-local math_utils = require('math_utils')
 local game_state = require('game_state')
 
 function script:on_init()
@@ -78,7 +77,7 @@ function script:check_paddle_collision(paddle_script, paddle_x)
 	if ball_sphere:intersects(paddle_aabb) then
 		--  Calculate hit position on paddle (-1 to 1, where 0 is center)
 		local hit_pos = (self.y - paddle_y) / self.paddle_half_height
-		hit_pos = math_utils.clamp(hit_pos, -1, 1)
+		hit_pos = engine.math.clamp(hit_pos, -1, 1)
 
 		-- Reverse horizontal direction
 		self.vx = -self.vx
