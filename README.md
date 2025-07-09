@@ -2,6 +2,8 @@
 
 A classic two-player Pong game built with the SolarSail engine.
 
+![Pong Game](screenshot.png)
+
 ## Controls
 
 - **Left paddle**: W (up), S (down)
